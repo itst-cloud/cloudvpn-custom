@@ -1,31 +1,25 @@
-# AWS credentials
+# -------- WireGuard Docker Configs --------
+# Prevent sensitive WireGuard outputs from being committed
+wireguard-docker/wg0.conf
+wireguard-docker/wg0.conf.*
+wireguard-docker/privatekey
+wireguard-docker/publickey
+wireguard-docker/*.png
+wireguard-docker/config/
+
+# -------- Terraform Secrets --------
+terraform/terraform.tfstate
+terraform/terraform.tfstate.*
+terraform/.terraform/
+terraform/terraform.tfvars
+
+# -------- Scripts That Might Store Output --------
+scripts/*.log
+scripts/output/
+
+# -------- System / Misc --------
 *.pem
 *.key
-*.crt
 *.env
-
-# WireGuard secrets
-**/privatekey
-**/publickey
-**/wg0.conf
-**/wg0.conf.*
-**/wg-client.conf
-**/wg-client.png
-**/config/wg*
-
-# Terraform state files
-*.tfstate
-*.tfstate.*
-.terraform/
-terraform.tfvars
-
-# Docker and logs
-*.log
-docker-compose.override.yml
-
-# QR Code outputs
-**/*.png
-
-# OS/system files
 .DS_Store
 Thumbs.db
