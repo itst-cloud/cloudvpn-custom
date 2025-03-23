@@ -1,0 +1,31 @@
+# AWS credentials
+*.pem
+*.key
+*.crt
+*.env
+
+# WireGuard secrets
+**/privatekey
+**/publickey
+**/wg0.conf
+**/wg0.conf.*
+**/wg-client.conf
+**/wg-client.png
+**/config/wg*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+
+# Docker and logs
+*.log
+docker-compose.override.yml
+
+# QR Code outputs
+**/*.png
+
+# OS/system files
+.DS_Store
+Thumbs.db
